@@ -8,13 +8,13 @@ import Cart from './src/screens/Cart';
 import Home from './src/screens/Home';
 
 const LoginStack = createStackNavigator({
-  Login: {screen: Login},
-  Home: {screen: Home},
+  Login: { screen: Login },
+  Home: { screen: Home },
 });
 
 const ProductsStack = createStackNavigator({
-  Products: {screen: Products},
-  DetailProduct: {screen: DetailProduct},
+  Products: { screen: Products },
+  DetailProduct: { screen: DetailProduct },
 });
 
 const CartStack = createStackNavigator({
@@ -28,7 +28,17 @@ const SettingStack = createStackNavigator({
 const MainNavigator = createBottomTabNavigator({
   ProductsStack,
   CartStack,
-  SettingStack
+  SettingStack,
+
+}, {
+  tabBarOptions: {
+    
+    style: {
+      backgroundColor: '#171F33',
+      color: 'white'
+
+    }
+  }
 })
 
 module.exports.LoginHome = LoginStack;

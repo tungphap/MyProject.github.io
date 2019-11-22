@@ -4,7 +4,8 @@ import {
     Text,
     View,
     Image,
-    StyleSheet
+    StyleSheet,
+    Dimensions
 } from 'react-native';
 
 
@@ -16,20 +17,20 @@ export default function Items(props) {
             onPress = {onPress}
         >
             <Image source={product.image} />
-            <Text>{product.name}</Text>
+            <Text style={styles.textName}>{product.name}</Text>
         </TouchableOpacity>
+        
     );
 }
-
+const WidthDrive = Dimensions.get('window').width
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
-        borderWidth: 1,
-        margin: 16,
-        padding: 16,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.8,
-        shadowRadius: 2,
+        margin: 10,
+        marginLeft:0,
+    },
+    textName:{
+        fontWeight: 'bold',
+        fontSize: 15
     }
 });

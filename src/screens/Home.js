@@ -7,6 +7,7 @@ export default class Home extends React.Component {
     static navigationOptions = {
         header: null
     }
+    
     render(){
         const AppNavigat = createAppContainer(AppNavigator.TabNavigator)
         return(

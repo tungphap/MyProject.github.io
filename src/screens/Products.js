@@ -29,6 +29,7 @@ export default class Home extends React.Component {
         return (
             <FlatList
                 data = {Data}
+                numColumns = {2}
                 renderItem = {({item}) => 
                     <Items 
                         product={item}
