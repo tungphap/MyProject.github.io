@@ -1,10 +1,14 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import cartIC from '../icon/cart.png'
+import cartT from '../icon/carttab.png'
 
 export default class Cart extends React.Component {
     static navigationOptions = {
-        title: 'Cart'
+        title: 'Cart',
+        tabBarIcon: ({ tintColor }) => (
+            <Image source={cartT}/>
+        )
     }
     
     render() {

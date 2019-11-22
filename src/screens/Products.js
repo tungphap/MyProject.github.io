@@ -9,6 +9,8 @@ import book3 from '../icon/book3.jpg'
 import book4 from '../icon/book4.jpg'
 import book5 from '../icon/book5.jpg'
 import book6 from '../icon/book6.jpg'
+import homeT from '../icon/homtab.png'
+
 
 const Data = [
     { id: 1, name: 'Item 1', image: book1, price: 2000 },
@@ -22,7 +24,10 @@ const Data = [
 
 export default class Home extends React.Component {
     static navigationOptions = {
-        title: 'Home'
+        title: 'Home',
+        tabBarIcon: ({ tintColor }) => (
+            <Image source={homeT}/>
+        )
     }
     render() {
         const { navigation } = this.props;

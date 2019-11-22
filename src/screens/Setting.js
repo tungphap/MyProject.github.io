@@ -1,16 +1,20 @@
-import React from 'react'
-import { View, Text, Image, Dimensions, StyleSheet } from 'react-native'
-import setting from '../icon/setting.png'
+import React from 'react';
+import { View, Text, Image, Dimensions, StyleSheet } from 'react-native';
+import setting from '../icon/setting.png';
+import settingT from '../icon/settingtab.png';
 
-
+import Icon from 'react-native-vector-icons/Ionicons'
 export default class Setting extends React.Component {
     static navigationOptions = {
-        title: 'Setting'
+        title: 'Setting',
+        tabBarIcon: ({ tintColor }) => (
+            <Image source={settingT}/>
+        )
     }
-    render(){
-        return(
+    render() {
+        return (
             <View style={styles.container}>
-                <Image source={setting} style={styles.img}/>
+                <Image source={setting} style={styles.img} />
                 <Text>This is Setting Screen</Text>
             </View>
         );

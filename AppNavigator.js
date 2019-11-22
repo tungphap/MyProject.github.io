@@ -26,20 +26,21 @@ const SettingStack = createStackNavigator({
 });
 
 const MainNavigator = createBottomTabNavigator({
-  ProductsStack,
-  CartStack,
-  SettingStack,
-
+  Home: {screen: ProductsStack},
+  Cart: {
+    screen: Cart,
+  },
+  Setting: {
+    screen: Setting,
+  }
 }, {
   tabBarOptions: {
-    
     style: {
-      backgroundColor: '#171F33',
+      backgroundColor: '#fff',
       color: 'white'
-
     }
   }
-})
+});
 
 module.exports.LoginHome = LoginStack;
 module.exports.TabNavigator = MainNavigator;
