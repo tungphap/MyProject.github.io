@@ -6,6 +6,7 @@ import DetailProduct from './src/screens/DetailProduct';
 import Setting from './src/screens/Setting';
 import Cart from './src/screens/Cart';
 import Home from './src/screens/Home';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const LoginStack = createStackNavigator({
   Login: { screen: Login },
@@ -26,7 +27,9 @@ const SettingStack = createStackNavigator({
 });
 
 const MainNavigator = createBottomTabNavigator({
-  Home: {screen: ProductsStack},
+  Home: {
+    screen: ProductsStack, 
+  },
   Cart: {
     screen: Cart,
   },
@@ -35,9 +38,9 @@ const MainNavigator = createBottomTabNavigator({
   }
 }, {
   tabBarOptions: {
+    showLabel: false,
     style: {
-      backgroundColor: '#fff',
-      color: 'white'
+      backgroundColor: '#a369ff',
     }
   }
 });

@@ -2,13 +2,13 @@ import React from 'react';
 import { View, Text, Image, Dimensions, StyleSheet } from 'react-native';
 import setting from '../icon/setting.png';
 import settingT from '../icon/settingtab.png';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Icon from 'react-native-vector-icons/Ionicons'
 export default class Setting extends React.Component {
     static navigationOptions = {
         title: 'Setting',
-        tabBarIcon: ({ tintColor }) => (
-            <Image source={settingT}/>
+        tabBarIcon: ({ focused, tintColor:color }) => (
+            <Icon name="settings" size={20} color='white' />
         )
     }
     render() {

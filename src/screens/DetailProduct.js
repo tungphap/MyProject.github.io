@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet,TouchableOpacity } from 'react-native'
 import {  } from 'react-native-gesture-handler';
+import homeT from '../icon/homtab.png'
 
 
 export default class DetailProduct extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
-            title: navigation.getParam('title')
+            title: navigation.getParam('title'),
         }
     }
     render() {

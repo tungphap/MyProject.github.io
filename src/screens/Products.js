@@ -25,9 +25,6 @@ const Data = [
 export default class Home extends React.Component {
     static navigationOptions = {
         title: 'Home',
-        tabBarIcon: ({ tintColor }) => (
-            <Image source={homeT}/>
-        )
     }
     render() {
         const { navigation } = this.props;

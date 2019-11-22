@@ -2,12 +2,13 @@ import React from 'react'
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import cartIC from '../icon/cart.png'
 import cartT from '../icon/carttab.png'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class Cart extends React.Component {
     static navigationOptions = {
         title: 'Cart',
         tabBarIcon: ({ tintColor }) => (
-            <Image source={cartT}/>
+            <Icon name="cart" size={20} color='white' />
         )
     }
     

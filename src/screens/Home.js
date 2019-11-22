@@ -1,17 +1,20 @@
 import React from 'react';
-import {Text} from 'react-native'
+import { Text } from 'react-native'
 import { createAppContainer } from 'react-navigation'
 import AppNavigator from '../../AppNavigator'
-
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export default class Home extends React.Component {
     static navigationOptions = {
-        header: null
+        header: null,
+        tabBarIcon: ({ tintColor }) => (
+            <Icon name="cart" size={20} color='white' />
+        )
     }
-    
-    render(){
+
+    render() {
         const AppNavigat = createAppContainer(AppNavigator.TabNavigator)
-        return(
-            <AppNavigat/>
+        return (
+            <AppNavigat />
         );
     }
 }
